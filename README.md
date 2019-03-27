@@ -7,3 +7,16 @@ General Notes:
 2. The Bluetooth module provided with the kit is not compatible with the iPhone. iPhone use BLE (Bluetooth Low Energy) and require a different module. I bought the Ks0174 keyestudio HM-10 Bluetooth-4.0 V2 board which was pin compatible with the included module. 
 3. Side Note - I am writing a new iPhone app to communicate with the Ks0174 keyestudio HM-10 Bluetooth-4.0 V2 module. The provided mobile app to control the robot for Android only. More to come on the iPhone App progress
 4. The expansion board (including the bluetooth module) needs to be removed when uploading code to the arduino. Apprently there is a conflict on the TX/RX lines used for programming when the Bluetooth module is installed. This is partly the reason I bought the second Uno board.  
+
+Board Bring Up:
+1. With the Arduino development environment installed, and your Aduino powered up and connected via the USB cable, click on Tools->Get Board Info. If all is set up properly, you should see something like this:
+BN: Arduino/Genuino Uno
+VID: 2341
+PID: 0043
+SN: 557363235393514191C2 
+2. Load the example Communication sketch (Arduino programs are called sketches) by cklicking on File->Examples->04Communication->ASCIITable. This will load a small program that prints an ASCII table via the serial monitor. 
+2. Complie the sketch by selecting Sketch->Verify/Compile. insure you have a clean complie as shown in the lower window.
+3. Upload the sketch by clicking Sketch->Upload. You should see some blinking on the Arduino board. 
+4. Open the Serial Monitor, by clicking on the small magnifying glass icon on the right of the toolbar. 
+5. The ASCII table should fill the screen. Now you know everything is working. 
+
