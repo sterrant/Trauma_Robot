@@ -20,3 +20,5 @@ SN: 557363235393514191C2
 4. Open the Serial Monitor, by clicking on the small magnifying glass icon on the right of the toolbar. 
 5. The ASCII table should fill the screen. Now you know everything is working. 
 
+Programs Description:
+1. basic_BLE_coms_mar27a.ino - Basic Bluetooth communication sketch for the Arduino board. Establishes a connection with the Bluetooth board. Prints what it receives (in decimal) to the serial monitor.  This will form the basis for the motor controls. For example, resciving an "f" will turn on both motors in the forward direction. Similarly, receiving an "s" will stop.     
