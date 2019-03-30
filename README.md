@@ -7,6 +7,7 @@ General Notes:
 2. The Bluetooth module provided with the kit https://wiki.keyestudio.com/Ks0055_keyestudio_Bluetooth_Module is not compatible with the iPhone. iPhones use BLE (Bluetooth Low Energy) and require a different module. I bought the Ks0174 keyestudio HM-10 Bluetooth-4.0 V2 board which uses BLE and was pin compatible with the included module https://wiki.keyestudio.com/index.php/Ks0174_keyestudio_HM-10_Bluetooth-4.0_V2. 
 3. Side Note - I am writing a new iPhone app to communicate with the Ks0174 keyestudio HM-10 Bluetooth-4.0 V2 module. The provided mobile app to control the robot for Android only. More to come on the iPhone App progress
 4. The expansion board (including the bluetooth module) needs to be removed when uploading code to the arduino. Apprently there is a conflict on the TX/RX lines used for programming when the Bluetooth module is installed. This is partly the reason I bought the second Uno board.  
+5. Batteries - I thought i could pop a couple AA's in there, but they dont fit. Battery holder is designed for a 18650 rechargable lithium cell. Bought two + charger on Amazon. See wiki.
 
 Board Bring Up:
 1. With the Arduino development environment installed, and your Aduino powered up and connected via the USB cable, click on Tools->Get Board Info. If all is set up properly, you should see something like this:
@@ -21,4 +22,5 @@ SN: 557363235393514191C2
 5. The ASCII table should fill the screen. Now you know everything is working. 
 
 Programs Description:
-1. basic_BLE_coms_mar27a.ino - Basic Bluetooth communication sketch for the Arduino board. Establishes a connection with the Bluetooth board. Prints what it receives (in decimal) to the serial monitor.  This will form the basis for the motor controls. For example, resciving an "f" will turn on both motors in the forward direction. Similarly, receiving an "s" will stop.     
+1. basic_BLE_coms_mar27a.ino - Basic Bluetooth communication sketch for the Arduino board. Establishes a connection with the Bluetooth board. Prints what it receives (in decimal) to the serial monitor.  This will form the basis for the motor controls. For example, resciving an "f" will turn on both motors in the forward direction. Similarly, receiving an "s" will stop.  
+BLE_coms_with_motor_control_mar28a.ino - As above, but now includes motor driver code per the Keyestudio wiki. It runs, but motors go the wrong way. need to check polarity of the connections and also the L298P Motor Driver Shield. Also pretty fast on 12V external power. Will check on 7V (batteries), but may need to dial down the PWM value. 
