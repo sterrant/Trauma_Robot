@@ -8,6 +8,7 @@ Hi All. I wanted to capture some of my lessons learned while building and progra
 3. Side Note - I am writing a new iPhone app to communicate with the Ks0174 keyestudio HM-10 Bluetooth-4.0 V2 module. The provided mobile app to control the robot for Android only. More to come on the iPhone App progress
 4. The expansion board (including the bluetooth module) needs to be removed when uploading code to the arduino. Apprently there is a conflict on the TX/RX lines used for programming when the Bluetooth module is installed. This is partly the reason I bought the second Uno board.  
 5. Batteries - I thought i could pop a couple AA's in there, but they dont fit. Battery holder is designed for a 18650 rechargable lithium cell. Bought two + charger on Amazon. See below.
+![image](https://user-images.githubusercontent.com/16261544/55297782-81219500-53f7-11e9-9824-4852b2918911.png)
 
 ## Board Bring Up:
 1. With the Arduino development environment installed, and your Aduino powered up and connected via the USB cable, click on Tools->Get Board Info. If all is set up properly, you should see something like this:
